@@ -13,7 +13,14 @@ return new class extends Migration
     {
         Schema::create('car_models', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('brand_id');//foreign key
+            $table->string('name');
+
+            $table->softDeletes();
             $table->timestamps();
+            //foreign key nereden alınacak sütun ,tablo ,tablodaki_sütun,
+            // eğer silinirse parent->child yönünde silme
+            $table->foreign('brand_id')->on('car_models')->references('id')->onDelete('cascade)');
         });
     }
 
