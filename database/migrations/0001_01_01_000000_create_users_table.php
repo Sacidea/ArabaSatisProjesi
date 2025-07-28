@@ -14,6 +14,9 @@ return new class extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            //jetstream ile gelen user tablosuna surname ve role öz. ekle
+            $table->string('surname');
+            $table->tinyInteger('role')->comment('0-Superdmin,1-admin,2-satici');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');

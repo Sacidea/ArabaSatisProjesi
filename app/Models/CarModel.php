@@ -7,7 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class CarModel extends Model
 {
     use HasFactory,SoftDeletes;
-    
     protected $table='car_models';
 
 
