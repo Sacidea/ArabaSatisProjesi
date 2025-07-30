@@ -14,13 +14,12 @@ return new class extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            //jetstream ile gelen user tablosuna surname ve role öz. ekle
-            $table->string('surname');
-            $table->tinyInteger('role')->comment('0-Superdmin,1-admin,2-satici');
+             $table->string('surname');//ekleyince CreateNewUser dosyasına ve modeldeki fillable
+            $table->tinyInteger('role')->comment('0-Superadmin 1-admin 2-satici')->default(2);
             $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
+            $table->timestamp('email_verified_at')->nullable();//email doğrulama
             $table->string('password');
-            $table->rememberToken();
+            $table->rememberToken(); //şifre yenilemede tokengönderir
             $table->foreignId('current_team_id')->nullable();
             $table->string('profile_photo_path', 2048)->nullable();
             $table->timestamps();

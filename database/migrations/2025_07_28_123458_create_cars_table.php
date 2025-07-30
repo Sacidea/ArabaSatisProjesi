@@ -17,7 +17,7 @@ return new class extends Migration
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('damage_id');
             $table->unsignedBigInteger('town_id');
-            $table->unsignedInteger('year');
+            $table->unsignedInteger('year >= 1900');
             $table->string('color');
             $table->unsignedInteger('km');
             $table->boolean('guarente_status')->default(0);
@@ -26,16 +26,15 @@ return new class extends Migration
             $table->dateTime('announsment_date');
             $table->tinyInteger('status')->comment('0-pasif,1-aktif,2-satildi');
             $table->integer('fiyat');
-            $table->softDelete();
+            $table->softDeletes();
             $table->timestamps();
             $table->text('description')->nullable();
         
             $table->foreign('user_id')->on('users')->references('id')->onDelete('cascade');
             $table->foreign('model_id')->on('car_models')->references('id')->onDelete('cascade');
             $table->foreign('damage_id')->on('car_damages')->references('id')->onDelete('cascade');
-            $table->foreign('town_id')->on('towns')->references('id')->onDelete('cascade');
-            //yıl aralığını database seviyesinde kontrol eden kod
-            DB::statement('ALTER TABLE table_name ADD CONSTRAINT year_check CHECK (year >= 1900)');
+           //$table->foreign('town_id')->on('towns')->references('id')->onDelete('cascade');
+           
         });
     }
 

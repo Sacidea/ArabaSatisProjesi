@@ -19,7 +19,7 @@ return new class extends Migration
 
             $table->softDeletes();
             $table->timestamps();
-            $table->foreign('car_id')->on('cars')->references('id')->onDelete('cascade)');
+            $table->foreign('car_id')->on('cars')->references('id')->onDelete('cascade');
         });
     }
 

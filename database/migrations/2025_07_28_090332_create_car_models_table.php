@@ -20,7 +20,7 @@ return new class extends Migration
             $table->timestamps();
             //foreign key nereden alınacak sütun ,tablo ,tablodaki_sütun,
             // eğer silinirse parent->child yönünde silme
-            $table->foreign('brand_id')->on('car_models')->references('id')->onDelete('cascade)');
+            $table->foreign('brand_id')->on('car_models')->references('id')->onDelete('cascade');
         });
     }
 
