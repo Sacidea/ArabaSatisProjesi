@@ -6,7 +6,7 @@ use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-class RoleControl
+class roleRedirect
 {
     /**
      * Handle an incoming request.
@@ -14,7 +14,15 @@ class RoleControl
      * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
      */
     public function handle(Request $request, Closure $next): Response
-    {
-        return $next($request);
+    {   
+
+        $user=Auth::user();
+        if($user->role==1){
+             return redirect()->route('adminDashboard');}
+
+        elseif($user->role==1){
+            return redirect()->route('Dashboard');
+        }else{
+        return $next($request);}
     }
 }

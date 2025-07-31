@@ -7,6 +7,7 @@ use App\public\view;
 use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Auth;
 
+
 class AdminController extends Controller
 {
     public function index(){
@@ -18,7 +19,7 @@ class AdminController extends Controller
         if($user->role==1){
         return view('panel.admin.carBrand.index');
         }else{
-            return 'hata';
+            return abort(403);
     }
 }
     public function carBrandCreatePage(){
