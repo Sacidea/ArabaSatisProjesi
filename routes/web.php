@@ -29,7 +29,7 @@ Route::get('/firat', function(){
     return 'firat';})
     ->middleware('kayitliMi');
 
-Route::middleware(['dashboard', config('jetstream.auth_session'),'verified'])->group(function(){
+Route::middleware(['auth:sanctum', config('jetstream.auth_session'),'verified'])->group(function(){
     Route::get('/code23',function(){
         return view('dashboard');})
         ->name('dashboard');
