@@ -14,8 +14,8 @@ class CarBrand extends Model
    protected $table='car_brands';
 
     protected $fillable = [
-        'name', // Seeder'da kullanılan alan
-        // Diğer doldurulabilir alanlar
+        'name',  
+        
     ];
 
 

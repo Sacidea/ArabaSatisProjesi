@@ -31,8 +31,8 @@
 
 <body class="bg-theme bg-theme1">
 
-<!-- start loader -->
-   <div id="pageloader-overlay" class="visible incoming"><div class="loader-wrapper-outer"><div class="loader-wrapper-inner" ><div class="loader"></div></div></div></div>
+<!-- start loader    <input type="text" class="form-control form-control-rounded" id="input-6" placeholder="Enter Your Name">-->
+   <div id="pageloader-overlay" class="visible incoming"><div class="loader-wrapper-outer"><div class="loader-wrapper-inner" ><div class="loader"></div></div>
    <!-- end loader -->
 
 <!-- Start wrapper-->
@@ -63,7 +63,7 @@
 			  <div class="form-group">
 			  <label for="exampleInputName" class="">İsim</label>
 			   <div class="position-relative has-icon-right">
-				  <input type="text" id="exampleInputName" class="form-control input-shadow" name="name" placeholder="Adınızı giriniz">
+				  <input type="text" id="exampleInputName" class="form-control form-control-rounded" name="name" placeholder="Adınızı giriniz">
 				  <div class="form-control-position">
 					  <i class="icon-user"></i>
 				  </div>
@@ -73,7 +73,7 @@
             <div class="form-group">
 			  <label for="exampleInputName" class="">Soyisim</label>
 			   <div class="position-relative has-icon-right">
-				  <input type="text" id="exampleInputName" class="form-control input-shadow" name="surname" placeholder="Adınızı giriniz">
+				  <input type="text" id="exampleInputName" class="form-control form-control-rounded" name="surname" placeholder="Adınızı giriniz">
 				  <div class="form-control-position">
 					  <i class="icon-user"></i>
 				  </div>
@@ -83,7 +83,7 @@
 			  <div class="form-group">
 			  <label for="exampleInputEmailId" class="">Email </label>
 			   <div class="position-relative has-icon-right">
-				  <input type="email" id="exampleInputEmailId" class="form-control input-shadow" name="email" placeholder="Eposta adresini girinmiz">
+				  <input type="email" id="exampleInputEmailId" class="form-control form-control-rounded" name="email" placeholder="Eposta adresini girinmiz">
 				  <div class="form-control-position">
 					  <i class="icon-envelope-open"></i>
 				  </div>
@@ -92,7 +92,7 @@
 			  <div class="form-group">
 			   <label for="exampleInputPassword" class="">Şifre</label>
 			   <div class="position-relative has-icon-right">
-				  <input  id="exampleInputPassword" name="password" type="password" class="form-control input-shadow" required autocomplete="new-password" placeholder="Şifrenizi giriniz">
+				  <input  id="exampleInputPassword" name="password" type="password" class="form-control form-control-rounded"  required autocomplete="new-password" placeholder="Şifrenizi giriniz">
 				  <div class="form-control-position">
 					  <i class="icon-lock"></i>
 				  </div>
@@ -103,7 +103,7 @@
                <div class="form-group">
 			   <label for="exampleInputPassword" class="">Parola tekrar</label>
 			   <div class="position-relative has-icon-right">
-				  <input  id="exampleInputPassword" type="password" name="password_confirmation" class="form-control input-shadow"  placeholder="Şifrenizi tekrar giriniz">
+				  <input  id="exampleInputPassword" type="password" name="password_confirmation" class="form-control form-control-rounded"  placeholder="Şifrenizi tekrar giriniz">
 				  <div class="form-control-position">
 					  <i class="icon-lock"></i>
 				  </div>
@@ -113,7 +113,7 @@
               	  <div class="form-group">
 			  <label for="referans" class="">Referans Kodu</label>
 			   <div class="position-relative has-icon-right">
-				  <input type="text" id="referans" class="form-control input-shadow" name="referans" placeholder="Referans kodunu giriniz">
+				  <input type="text" id="referans" class="form-control form-control-rounded"  name="referans" placeholder="Referans kodunu giriniz">
 				  <div class="form-control-position">
 					  <i class="fa fa-yelp"></i>
 				  </div>
@@ -131,8 +131,7 @@
 			     </div>
 			    </div>
 			  
-			 <button type="submit"  class="btn btn-light btn-block waves-effect waves-light">Kayıt Ol</button>
-			  <div class="text-center mt-3">Sign Up With</div>
+			 <button type="submit"  class="btn btn-info btn-block waves-effect waves-light">Kayıt Ol</button>
 			  
 			 <div class="form-row mt-4">
 			  <div class="form-group mb-0 col-6">

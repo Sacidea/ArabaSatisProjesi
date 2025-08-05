@@ -14,7 +14,8 @@ class CarBrandSeeder extends Seeder
   
     public function run(): void
     {
-    /* $brand=new CarBrand();
+    /*Bu şekilde de oluşturulabilir
+     $brand=new CarBrand();
     $brand->name='Toyota';
     $brand->save();
 

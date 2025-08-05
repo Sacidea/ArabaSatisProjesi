@@ -5,10 +5,10 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
-
+use Illuminate\Support\Facades\Auth;
 class roleRedirect
 {
-    /**
+    /*
      * Handle an incoming request.
      *
      * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
@@ -18,10 +18,10 @@ class roleRedirect
 
         $user=Auth::user();
         if($user->role==1){
-             return redirect()->route('adminDashboard');}
+             return redirect()->route('panel.admin.carBrand.create');}
 
-        elseif($user->role==1){
-            return redirect()->route('Dashboard');
+        elseif($user->role==2){
+            return redirect()->route('panel.admin.carBrand.create');
         }else{
         return $next($request);}
     }
